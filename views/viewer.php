@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>Log Viewer</title>
-		<link href="<?php echo Bundle::assets(logviewer); ?>style.css?1" rel="stylesheet" type="text/css">
+		<link href="<?php echo Bundle::assets('logviewer'); ?>style.css?1" rel="stylesheet" type="text/css">
 	</head>
 
 	<body>
