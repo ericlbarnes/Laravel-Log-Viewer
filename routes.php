@@ -1,11 +1,11 @@
 <?php
 
-Route::get('logviewer', function()
+Route::get('(:bundle)', function()
 {
 	$storage = path('storage').'logs/';
 
 	// get all the files
-	$files = Logviewer\Dir::read($storage, array('.gitignore'));
+	$files = array_reverse(Logviewer\Dir::read($storage, array('.gitignore')));
 
 	$date = Input::get('date', date('Y-m-d'));
 
@@ -15,10 +15,9 @@ Route::get('logviewer', function()
 	}
 
 	$file = File::get($storage.$date.'.log');
-	$contents = explode("\n", $file);
+	$contents = array_reverse(explode("\n", $file));
 
 	return View::make('logviewer::viewer')
 		->with('contents', $contents)
 		->with('files', $files);
-
 });
