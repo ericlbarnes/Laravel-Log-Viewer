@@ -8,6 +8,11 @@ A simple bundle to display your log files.
 php artisan bundle:install logviewer
 ```
 
+## Publish assets
+```bsh
+php artisan bundle:publish logviewer
+```
+
 Then edit your application/bundles.php file and add:
 
 ```php

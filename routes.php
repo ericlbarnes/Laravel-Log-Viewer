@@ -1,6 +1,6 @@
 <?php
 
-Route::get('logviewer', function()
+Route::get('(:bundle)', function()
 {
 	$storage = path('storage').'logs/';
 
@@ -20,5 +20,4 @@ Route::get('logviewer', function()
 	return View::make('logviewer::viewer')
 		->with('contents', $contents)
 		->with('files', $files);
-
 });
