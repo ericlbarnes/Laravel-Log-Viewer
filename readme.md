@@ -1,6 +1,10 @@
 # Log Viewer
 
-A simple bundle to display your log files.
+A simple bundle to display your Laravel 3 log files.
+
+If you are using Laravel 4 please look at this repo: 
+https://github.com/mikemand/logviewer
+
 
 ## Installation
 
